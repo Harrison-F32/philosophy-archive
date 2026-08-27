@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Philosophers | Philosophy Archive</title>
+
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Georgia, "Times New Roman", serif;
+background: #f5f1e8;
+color: #202020;
+line-height: 1.6;
+}
+
+header {
+background: #171b24;
+color: white;
+padding: 25px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 24px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+nav a {
+color: #ddd;
+text-decoration: none;
+margin-left: 25px;
+font-family: Arial, sans-serif;
+font-size: 14px;
+}
+
+nav a:hover {
+color: white;
+}
+
+.page-header {
+padding: 90px 8% 60px;
+max-width: 1000px;
+}
+
+.page-header h1 {
+font-size: clamp(50px, 8vw, 80px);
+font-weight: normal;
+line-height: 1;
+margin-bottom: 25px;
+}
+
+.page-header p {
+max-width: 650px;
+font-size: 19px;
+color: #666;
+}
+
+.section {
+padding: 20px 8% 80px;
+}
+
+.section-title {
+font-size: 15px;
+font-family: Arial, sans-serif;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: #777;
+margin-bottom: 25px;
+}
+
+.philosophers {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.philosopher {
+border: 1px solid #c9c3b8;
+padding: 30px;
+min-height: 210px;
+text-decoration: none;
+color: #202020;
+transition: transform 0.2s, background 0.2s;
+display: block;
+}
+
+.philosopher:hover {
+transform: translateY(-5px);
+background: #ebe6db;
+}
+
+.period {
+font-family: Arial, sans-serif;
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: #888;
+margin-bottom: 10px;
+}
+
+.philosopher h2 {
+font-size: 29px;
+font-weight: normal;
+margin-bottom: 12px;
+}
+
+.philosopher p {
+color: #666;
+font-size: 15px;
+}
+
+footer {
+padding: 35px 8%;
+font-family: Arial, sans-serif;
+font-size: 13px;
+color: #777;
+border-top: 1px solid #c9c3b8;
+}
+
+@media (max-width: 700px) {
+header {
+display: block;
+}
+
+nav {
+margin-top: 15px;
+}
+
+nav a {
+margin-left: 0;
+margin-right: 18px;
+}
+
+.philosophers {
+grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">PHILOSOPHY ARCHIVE</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="philosophers.html">Philosophers</a>
+<a href="#">Ideas</a>
+<a href="#">Texts</a>
+<a href="#">Classics</a>
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="page-header">
+
+<h1>Philosophers</h1>
+
+<p>
+Explore the lives, arguments, and intellectual traditions
+of thinkers who have shaped the history of philosophy.
+</p>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+Ancient Philosophy
+</div>
+
+<div class="philosophers">
+
+<a class="philosopher" href="socrates.html">
+<div class="period">c. 470–399 BCE</div>
+<h2>Socrates</h2>
+<p>
+Questioning, virtue, knowledge, and the
+Socratic method.
+</p>
+</a>
+
+<a class="philosopher" href="#">
+<div class="period">427–347 BCE</div>
+<h2>Plato</h2>
+<p>
+The Forms, justice, politics, knowledge,
+and the ideal state.
+</p>
+</a>
+
+<a class="philosopher" href="#">
+<div class="period">384–322 BCE</div>
+<h2>Aristotle</h2>
+<p>
+Logic, ethics, politics, metaphysics,
+and the nature of reality.
+</p>
+</a>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+Later Thinkers
+</div>
+
+<div class="philosophers">
+
+<a class="philosopher" href="#">
+<div class="period">1632–1704</div>
+<h2>John Locke</h2>
+<p>
+Knowledge, natural rights, government,
+and political liberty.
+</p>
+</a>
+
+<a class="philosopher" href="#">
+<div class="period">1806–1873</div>
+<h2>John Stuart Mill</h2>
+<p>
+Liberty, utilitarianism, individuality,
+and political philosophy.
+</p>
+</a>
+
+<a class="philosopher" href="#">
+<div class="period">1921–2002</div>
+<h2>John Rawls</h2>
+<p>
+Justice, equality, political liberalism,
+and the original position.
+</p>
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+Philosophy Archive · An independent project
+</footer>
+
+</body>
+</html>
