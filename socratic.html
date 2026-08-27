@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Socratic Method | Philosophy Archive</title>
+
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Georgia, "Times New Roman", serif;
+background: #f5f1e8;
+color: #202020;
+line-height: 1.7;
+}
+
+header {
+background: #171b24;
+color: white;
+padding: 25px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-size: 24px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+nav a {
+color: #ddd;
+text-decoration: none;
+margin-left: 25px;
+font-family: Arial, sans-serif;
+font-size: 14px;
+}
+
+nav a:hover {
+color: white;
+}
+
+.hero {
+padding: 80px 8% 50px;
+border-bottom: 1px solid #c9c3b8;
+}
+
+.label {
+font-family: Arial, sans-serif;
+font-size: 13px;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #777;
+margin-bottom: 15px;
+}
+
+.hero h1 {
+font-size: clamp(50px, 8vw, 85px);
+font-weight: normal;
+line-height: 1;
+margin-bottom: 25px;
+}
+
+.hero p {
+max-width: 700px;
+font-size: 19px;
+color: #666;
+}
+
+.experience {
+max-width: 850px;
+margin: 70px auto;
+padding: 0 8%;
+}
+
+.progress {
+font-family: Arial, sans-serif;
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+color: #888;
+margin-bottom: 25px;
+}
+
+.question-box {
+border: 1px solid #c9c3b8;
+padding: 45px;
+background: #f8f5ee;
+}
+
+.speaker {
+font-family: Arial, sans-serif;
+font-size: 13px;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #777;
+margin-bottom: 15px;
+}
+
+.question {
+font-size: 32px;
+line-height: 1.3;
+margin-bottom: 35px;
+}
+
+.answers {
+display: grid;
+gap: 12px;
+}
+
+.answer {
+width: 100%;
+padding: 16px 20px;
+text-align: left;
+border: 1px solid #aaa;
+background: transparent;
+font-family: Georgia, "Times New Roman", serif;
+font-size: 16px;
+cursor: pointer;
+transition: background 0.2s, transform 0.2s;
+}
+
+.answer:hover {
+background: #ebe6db;
+transform: translateX(4px);
+}
+
+.result {
+display: none;
+margin-top: 30px;
+padding: 30px;
+background: #171b24;
+color: white;
+}
+
+.result h2 {
+font-size: 28px;
+font-weight: normal;
+margin-bottom: 15px;
+}
+
+.result p {
+color: #ccc;
+}
+
+.restart {
+margin-top: 25px;
+padding: 12px 20px;
+background: transparent;
+border: 1px solid #aaa;
+color: white;
+cursor: pointer;
+font-family: Arial, sans-serif;
+}
+
+.restart:hover {
+background: white;
+color: #171b24;
+}
+
+.back {
+text-align: center;
+margin: 50px 0 80px;
+}
+
+.back a {
+color: #555;
+text-decoration: none;
+font-family: Arial, sans-serif;
+font-size: 14px;
+}
+
+footer {
+padding: 35px 8%;
+font-family: Arial, sans-serif;
+font-size: 13px;
+color: #777;
+border-top: 1px solid #c9c3b8;
+}
+
+@media (max-width: 700px) {
+header {
+display: block;
+}
+
+nav {
+margin-top: 15px;
+}
+
+nav a {
+margin-left: 0;
+margin-right: 18px;
+}
+
+.question-box {
+padding: 30px 20px;
+}
+
+.question {
+font-size: 25px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">PHILOSOPHY ARCHIVE</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="philosophers.html">Philosophers</a>
+<a href="#">Ideas</a>
+<a href="#">Texts</a>
+<a href="#">Classics</a>
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+<div class="label">Interactive Philosophy</div>
+
+<h1>The Socratic Method</h1>
+
+<p>
+Socrates rarely answered a question directly.
+Instead, he asked questions of his own.
+Try following an argument through a series of questions.
+</p>
+
+</section>
+
+
+<section class="experience">
+
+<div class="progress" id="progress">
+Question 1 of 4
+</div>
+
+<div class="question-box">
+
+<div class="speaker">
+Socrates asks:
+</div>
+
+<div class="question" id="question">
+What does it mean to live a good life?
+</div>
+
+<div class="answers" id="answers">
+
+<button class="answer" onclick="chooseAnswer(0)">
+To be happy.
+</button>
+
+<button class="answer" onclick="chooseAnswer(1)">
+To be morally good.
+</button>
+
+<button class="answer" onclick="chooseAnswer(2)">
+To achieve what you want.
+</button>
+
+</div>
+
+<div class="result" id="result">
+
+<h2 id="resultTitle"></h2>
+
+<p id="resultText"></p>
+
+<button class="restart" onclick="restart()">
+Begin again
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="back">
+<a href="socrates.html">← Back to Socrates</a>
+</div>
+
+</main>
+
+
+<footer>
+Philosophy Archive · An independent project
+</footer>
+
+
+<script>
+
+let questionNumber = 1;
+
+const questions = [
+
+{
+question: "What does it mean to live a good life?",
+answers: [
+"To be happy.",
+"To be morally good.",
+"To achieve what you want."
+]
+},
+
+{
+question: "If something makes you happy, does that automatically make it good?",
+answers: [
+"Yes. Happiness is what matters.",
+"No. Some things can make us happy but still be wrong.",
+"I'm not sure."
+]
+},
+
+{
+question: "How can you know whether something is truly good?",
+answers: [
+"Because society says it is good.",
+"Because I personally believe it is good.",
+"I would need to examine the reasons."
+]
+},
+
+{
+question: "Then perhaps the important question is not simply what you believe, but whether your beliefs survive examination.",
+answers: [
+"That seems right.",
+"I disagree.",
+"I need to think about it."
+]
+}
+
+];
+
+
+function chooseAnswer(answerNumber) {
+
+if (questionNumber >= questions.length) {
+
+showResult();
+
+return;
+}
+
+questionNumber++;
+
+const nextQuestion = questions[questionNumber - 1];
+
+document.getElementById("progress").textContent =
+"Question " + questionNumber + " of " + questions.length;
+
+document.getElementById("question").textContent =
+nextQuestion.question;
+
+const answers = document.getElementById("answers");
+
+answers.innerHTML = "";
+
+nextQuestion.answers.forEach(function(answer, index) {
+
+const button = document.createElement("button");
+
+button.className = "answer";
+
+button.textContent = answer;
+
+button.onclick = function() {
+chooseAnswer(index);
+};
+
+answers.appendChild(button);
+
+});
+
+}
+
+
+function showResult() {
+
+document.getElementById("progress").textContent =
+"The examination is complete";
+
+document.getElementById("question").style.display = "none";
+
+document.getElementById("answers").style.display = "none";
+
+document.getElementById("result").style.display = "block";
+
+document.getElementById("resultTitle").textContent =
+"What have we discovered?";
+
+document.getElementById("resultText").textContent =
+"The goal of the Socratic method is not simply to win an argument. "
++ "It is to examine the assumptions behind our beliefs and discover "
++ "whether we really understand what we think we know.";
+
+}
+
+
+function restart() {
+
+questionNumber = 1;
+
+document.getElementById("progress").textContent =
+"Question 1 of 4";
+
+document.getElementById("question").style.display = "block";
+
+document.getElementById("answers").style.display = "grid";
+
+document.getElementById("result").style.display = "none";
+
+document.getElementById("question").textContent =
+questions[0].question;
+
+const answers = document.getElementById("answers");
+
+answers.innerHTML = "";
+
+questions[0].answers.forEach(function(answer, index) {
+
+const button = document.createElement("button");
+
+button.className = "answer";
+
+button.textContent = answer;
+
+button.onclick = function() {
+chooseAnswer(index);
+};
+
+answers.appendChild(button);
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
