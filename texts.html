@@ -6,142 +6,144 @@
     <title>Texts | Philosophy Archive</title>
 
     <style>
-        body {
-            margin: 0;
-            background: #f5f1e8;
-            color: #202020;
-            font-family: Georgia, serif;
-        }
+    body {
+        margin: 0;
+        background: #f5f1e8;
+        color: #202020;
+        font-family: Georgia, serif;
+    }
 
-     header {
-background: #171b24;
-color: white;
-padding: 25px 8%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
+    header {
+        background: #171b24;
+        color: white;
+        padding: 25px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.logo {
-font-size: 24px;
-font-weight: bold;
-letter-spacing: 1px;
-}
+    .logo {
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
 
-nav a {
-color: #ddd;
-text-decoration: none;
-margin-left: 25px;
-font-family: "Times New Roman", Times, serif;
-font-size: 14px;
-}
+    nav a {
+        color: #ddd;
+        text-decoration: none;
+        margin-left: 25px;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 18px;
+    }
 
-nav a:hover {
-color: white;
-}
+    nav a:hover {
+        color: white;
+    }
 
-.page-header {
-padding: 90px 8% 60px;
-max-width: 1000px;
-}
-        nav a:visited {
-            color: #f5f1e8;
-        }
+    .page-header {
+        padding: 90px 8% 60px;
+        max-width: 1000px;
+    }
 
-        main {
-            max-width: 1100px;
-            margin: 60px auto;
-            padding: 0 30px;
+    nav a:visited {
+        color: #f5f1e8;
+    }
+
+    main {
+        max-width: 1100px;
+        margin: 60px auto;
+        padding: 0 30px;
+    }
+
+    h2 {
+        font-size: 44px;
+        margin-bottom: 15px;
+    }
+
+    .intro {
+        font-size: 20px;
+        line-height: 1.6;
+        max-width: 750px;
+        margin-bottom: 50px;
+    }
+
+    .section {
+        margin-bottom: 50px;
+    }
+
+    .section h3 {
+        font-size: 28px;
+        border-bottom: 1px solid #c9c3b8;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .text-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .text-card {
+        display: block;
+        border: 1px solid #c9c3b8;
+        padding: 25px;
+        text-decoration: none;
+        color: #202020;
+        transition: transform 0.2s, background 0.2s;
+    }
+
+    .text-card:hover {
+        transform: translateY(-3px);
+        background: #eee9df;
+    }
+
+    .text-card h4 {
+        font-size: 22px;
+        margin: 0 0 8px 0;
+    }
+
+    .author {
+        font-style: italic;
+        color: #666;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    @media (max-width: 700px) {
+        .text-grid {
+            grid-template-columns: 1fr;
         }
 
         h2 {
-            font-size: 44px;
-            margin-bottom: 15px;
+            font-size: 36px;
         }
 
-        .intro {
-            font-size: 20px;
-            line-height: 1.6;
-            max-width: 750px;
-            margin-bottom: 50px;
-        }
-
-        .section {
-            margin-bottom: 50px;
-        }
-
-        .section h3 {
-            font-size: 28px;
-            border-bottom: 1px solid #c9c3b8;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .text-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .text-card {
-            display: block;
-            border: 1px solid #c9c3b8;
-            padding: 25px;
+        nav a {
+            display: inline;
+            border: none !important;
+            padding: 0 !important;
+            margin-right: 25px;
+            background: none !important;
+            color: #ddd !important;
             text-decoration: none;
-            color: #202020;
-            transition: transform 0.2s, background 0.2s;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 16px;
         }
 
-        .text-card:hover {
-            transform: translateY(-3px);
-            background: #eee9df;
+        nav a:hover {
+            color: white !important;
         }
 
-        .text-card h4 {
-            font-size: 22px;
-            margin: 0 0 8px 0;
+        nav a:visited {
+            color: #ddd !important;
         }
-
-        .author {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 12px;
-        }
-
-        .description {
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        @media (max-width: 700px) {
-            .text-grid {
-                grid-template-columns: 1fr;
-            }
-
-            h2 {
-                font-size: 36px;
-            }
-            nav a {
-                display: inline;
-                border: none !important;
-                padding: 0 !important;
-                margin-right: 25px;
-                background: none !important;
-                color: #ddd !important;
-                text-decoration: none;
-                font-family: "Times New Roman", Times, serif;
-                font-size: 16px;
-            }
-
-nav a:hover {
-    color: white !important;
-}
-
-nav a:visited {
-    color: #ddd !important;
-}
-        }
-    </style>
+    }
+</style>
 </head>    
 
 <body>
