@@ -13,39 +13,37 @@
             font-family: Georgia, serif;
         }
 
-       header {
-    background: #171b24;
-    color: white;
-    padding: 25px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+     header {
+background: #171b24;
+color: white;
+padding: 25px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 .logo {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 32px;
-    font-weight: bold;
+font-size: 24px;
+font-weight: bold;
+letter-spacing: 1px;
 }
 
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
+nav a {
+color: #ddd;
+text-decoration: none;
+margin-left: 25px;
+font-family: "Times New Roman", Times, serif;
+font-size: 14px;
+}
 
+nav a:hover {
+color: white;
+}
 
-       nav a {
-            color: #f5f1e8;
-            font-family: "Times New Roman", Times, serif;
-            font-size: 18px;
-            text-decoration: none;
-        }
-        
-       nav a:hover {
-        color: white;
-        }
-
+.page-header {
+padding: 90px 8% 60px;
+max-width: 1000px;
+}
         nav a:visited {
             color: #f5f1e8;
         }
@@ -149,8 +147,8 @@ nav a:visited {
 <body>
 
 <header>
-  <div class="logo">PHILOSOPHY ARCHIVE</div>
-    
+    <div class="logo">PHILOSOPHY ARCHIVE</div>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="philosophers.html">Philosophers</a>
