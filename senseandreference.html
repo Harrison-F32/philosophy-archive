@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>On Sense and Reference | Philosophy Archive</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            background: #f5f1e8;
-            color: #202020;
-            font-family: Georgia, serif;
-        }
+<title>On Sense and Reference | Philosophy Archive</title>
 
-        header {
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Georgia, "Times New Roman", serif;
+background: #f5f1e8;
+color: #202020;
+line-height: 1.6;
+}
+
+header {
 background: #171b24;
 color: white;
 padding: 25px 8%;
@@ -40,134 +47,156 @@ nav a:hover {
 color: white;
 }
 
-        header nav a:visited {
-            color: #ddd !important;
-        }
+main {
+max-width: 1000px;
+margin: 70px auto;
+padding: 0 30px;
+}
 
-        main {
-            max-width: 1000px;
-            margin: 70px auto;
-            padding: 0 30px;
-        }
+.page-header {
+padding: 90px 0 60px;
+max-width: 1000px;
+}
 
-        .back {
-            display: inline-block;
-            margin-bottom: 35px;
-            color: #666;
-            text-decoration: none;
-            font-family: "Times New Roman", Times, serif;
-            font-size: 15px;
-        }
+.page-header h1 {
+font-size: clamp(50px, 8vw, 80px);
+font-weight: normal;
+line-height: 1;
+margin-bottom: 25px;
+}
 
-        .back:hover {
-            color: #202020;
-        }
+.author {
+font-size: 19px;
+color: #666;
+font-style: italic;
+}
 
-        .title {
-            border-bottom: 1px solid #c9c3b8;
-            padding-bottom: 35px;
-            margin-bottom: 45px;
-        }
+.section {
+padding: 20px 0 60px;
+}
 
-        .title h1 {
-            font-size: 48px;
-            margin: 0 0 10px 0;
-            line-height: 1.1;
-        }
+.section-title {
+font-size: 15px;
+font-family: Arial, sans-serif;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: #777;
+margin-bottom: 25px;
+}
 
-        .author {
-            font-size: 21px;
-            font-style: italic;
-            color: #666;
-        }
+.section h2 {
+font-size: 32px;
+font-weight: normal;
+margin-bottom: 20px;
+}
 
-        .section {
-            margin-bottom: 50px;
-        }
+.section p {
+font-size: 18px;
+line-height: 1.7;
+max-width: 800px;
+margin-bottom: 20px;
+}
 
-        .section h2 {
-            font-size: 30px;
-            margin-bottom: 18px;
-        }
+.definition-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin-top: 30px;
+}
 
-        .section p {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 18px;
-        }
+.definition {
+border: 1px solid #c9c3b8;
+padding: 30px;
+min-height: 180px;
+}
 
-        .definition {
-            border-left: 3px solid #777;
-            padding: 15px 25px;
-            margin: 25px 0;
-            background: #eee9df;
-        }
+.definition h3 {
+font-size: 25px;
+font-weight: normal;
+margin-bottom: 15px;
+}
 
-        .definition strong {
-            font-size: 19px;
-        }
+.definition p {
+font-size: 16px;
+margin-bottom: 0;
+}
 
-        .definition p {
-            margin: 8px 0 0 0;
-        }
+.example {
+border-left: 3px solid #777;
+padding: 20px 25px;
+margin: 30px 0;
+background: #ebe6db;
+}
 
-        .comparison {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 25px;
-        }
+.example p {
+margin-bottom: 0;
+}
 
-        .card {
-            border: 1px solid #c9c3b8;
-            padding: 25px;
-        }
+.quote {
+font-style: italic;
+font-size: 20px;
+line-height: 1.6;
+margin: 30px 0;
+padding: 20px 30px;
+border-left: 3px solid #777;
+}
 
-        .card h3 {
-            margin-top: 0;
-            font-size: 22px;
-        }
+.connections {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
 
-        .card p {
-            font-size: 16px;
-            margin-bottom: 0;
-        }
+.connection {
+border: 1px solid #c9c3b8;
+padding: 25px;
+}
 
-        .quote {
-            font-style: italic;
-            font-size: 20px;
-            line-height: 1.6;
-            margin: 30px 0;
-            padding: 20px 30px;
-            border-left: 3px solid #777;
-        }
+.connection h3 {
+font-size: 22px;
+font-weight: normal;
+margin-bottom: 10px;
+}
 
-        .related a {
-            color: #444;
-            text-decoration: underline;
-        }
+.connection p {
+font-size: 16px;
+margin-bottom: 0;
+}
 
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-            }
+footer {
+padding: 35px 8%;
+font-family: Arial, sans-serif;
+font-size: 13px;
+color: #777;
+border-top: 1px solid #c9c3b8;
+}
 
-            header nav a {
-                margin-left: 0;
-                margin-right: 20px;
-            }
+@media (max-width: 700px) {
 
-            .title h1 {
-                font-size: 38px;
-            }
+header {
+display: block;
+}
 
-            .comparison {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+nav {
+margin-top: 15px;
+}
+
+nav a {
+margin-left: 0;
+margin-right: 18px;
+}
+
+.definition-grid,
+.connections {
+grid-template-columns: 1fr;
+}
+
+.page-header h1 {
+font-size: 50px;
+}
+
+}
+</style>
 </head>
 
 <body>
@@ -183,158 +212,240 @@ color: white;
     <a href="texts.html">Texts</a>
     <a href="#">Classics</a>
 </nav>
-  
+
 </header>
+
 
 <main>
 
-    <a class="back" href="texts.html">← Back to Texts</a>
+<section class="page-header">
 
-    <div class="title">
-        <h1>On Sense and Reference</h1>
-        <div class="author">Gottlob Frege</div>
-    </div>
+<h1>On Sense and Reference</h1>
 
-    <section class="section">
-        <h2>The Central Problem</h2>
+<div class="author">Gottlob Frege</div>
 
-        <p>
-            Frege begins with a puzzle about identity. If two expressions
-            refer to the same object, how can a statement identifying them
-            provide genuine information?
-        </p>
+</section>
 
-        <p>
-            For example, the expressions "the Morning Star" and
-            "the Evening Star" both refer to Venus. Yet discovering that
-            the Morning Star and the Evening Star are the same object
-            is informative. Frege's distinction between <strong>sense</strong>
-            and <strong>reference</strong> explains why.
-        </p>
-    </section>
 
-    <section class="section">
-        <h2>Sense and Reference</h2>
+<section class="section">
 
-        <div class="comparison">
+<div class="section-title">
+The Central Problem
+</div>
 
-            <div class="card">
-                <h3>Reference</h3>
-                <p>
-                    The object or entity that an expression actually
-                    picks out.
-                </p>
-            </div>
+<h2>How can two names refer to the same thing but mean something different?</h2>
 
-            <div class="card">
-                <h3>Sense</h3>
-                <p>
-                    The particular way in which that object is presented
-                    or thought of through the expression.
-                </p>
-            </div>
+<p>
+Frege begins with a problem about identity. Consider the statements
+“the Morning Star is the Morning Star” and “the Morning Star is the
+Evening Star.” The first appears trivial, while the second can represent
+a genuine discovery.
+</p>
 
-        </div>
+<p>
+Yet both “Morning Star” and “Evening Star” refer to the same object:
+Venus. Frege's distinction between <strong>sense</strong> and
+<strong>reference</strong> explains how this is possible.
+</p>
 
-        <div class="definition">
-            <strong>Reference</strong>
-            <p>
-                What the expression stands for or denotes.
-            </p>
-        </div>
+</section>
 
-        <div class="definition">
-            <strong>Sense</strong>
-            <p>
-                The mode of presentation through which the reference
-                is given to us.
-            </p>
-        </div>
-    </section>
 
-    <section class="section">
-        <h2>The Morning Star and Evening Star</h2>
+<section class="section">
 
-        <p>
-            Both "Morning Star" and "Evening Star" refer to Venus.
-            Their references are therefore identical.
-        </p>
+<div class="section-title">
+Two Aspects of Meaning
+</div>
 
-        <p>
-            Their senses, however, differ. One presents Venus as the
-            bright object appearing in the morning sky, while the other
-            presents it as the bright object appearing in the evening.
-        </p>
+<div class="definition-grid">
 
-        <p>
-            This explains why the statement
-            <strong>"The Morning Star is the Evening Star"</strong>
-            can be informative. The two expressions have the same
-            reference but different senses.
-        </p>
-    </section>
+<div class="definition">
 
-    <section class="section">
-        <h2>Frege's Puzzle About Identity</h2>
+<h3>Reference</h3>
 
-        <p>
-            Frege distinguishes between two kinds of identity statements.
-            "A = A" appears trivial, while "A = B" can be a genuine
-            discovery.
-        </p>
+<p>
+The object to which an expression refers. The references of
+“Morning Star” and “Evening Star” are both Venus.
+</p>
 
-        <p>
-            If A and B had nothing more than their reference, both
-            statements would seem to contain exactly the same information.
-            The distinction between sense and reference explains the
-            difference.
-        </p>
+</div>
 
-        <div class="quote">
-            The same object can be presented through different senses.
-        </div>
-    </section>
+<div class="definition">
 
-    <section class="section">
-        <h2>Why Sense Matters</h2>
+<h3>Sense</h3>
 
-        <p>
-            Frege's distinction is ultimately a theory about language
-            and thought. A person can understand two expressions as
-            conveying different information even when both expressions
-            refer to the same object.
-        </p>
+<p>
+The particular <em>mode of presentation</em> through which an object
+is given or thought of. The two expressions present Venus differently.
+</p>
 
-        <p>
-            This becomes especially important when Frege considers
-            sentences, thoughts, and contexts in which expressions no
-            longer have their ordinary reference.
-        </p>
-    </section>
+</div>
 
-    <section class="section related">
-        <h2>Connections</h2>
+</div>
 
-        <p>
-            Frege's distinction became enormously influential in the
-            philosophy of language and directly connects to later debates
-            about reference and meaning.
-        </p>
+</section>
 
-        <p>
-            <strong>Russell</strong> later challenged important aspects
-            of Frege's account through his theory of descriptions,
-            particularly in <em>On Denoting</em>.
-        </p>
 
-        <p>
-            <strong>Strawson</strong> subsequently criticized Russell's
-            treatment of referring expressions in <em>On Referring</em>,
-            bringing the discussion toward ordinary language.
-        </p>
-    </section>
+<section class="section">
+
+<div class="section-title">
+The Morning Star and Evening Star
+</div>
+
+<h2>One reference, two senses</h2>
+
+<p>
+The Morning Star is the bright object observed in the morning sky.
+The Evening Star is the bright object observed in the evening sky.
+Although these descriptions pick out the same astronomical object,
+they present that object in different ways.
+</p>
+
+<div class="example">
+
+<p>
+<strong>Reference:</strong> Venus<br>
+<strong>Sense of “Morning Star”:</strong> Venus as presented in the morning<br>
+<strong>Sense of “Evening Star”:</strong> Venus as presented in the evening
+</p>
+
+</div>
+
+<p>
+Therefore, learning that the Morning Star and Evening Star are identical
+can give us new knowledge. The reference is the same, but the sense is
+different.
+</p>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+Identity
+</div>
+
+<h2>A = A versus A = B</h2>
+
+<p>
+Frege's puzzle becomes clearer when we compare two identity statements.
+“A = A” appears to tell us nothing new. “A = B,” however, can tell us
+something we did not previously know.
+</p>
+
+<p>
+If the meaning of a name were nothing more than its reference, there
+would be no obvious reason for this difference. Frege therefore argues
+that expressions must also have a sense: a way in which their reference
+is presented.
+</p>
+
+<div class="quote">
+The same object can be presented in different ways.
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+Why It Matters
+</div>
+
+<h2>From language to thought</h2>
+
+<p>
+Frege's distinction is not merely about different words for the same
+object. It explains how language can contain information and how two
+people can understand an expression while approaching the same object
+through different modes of presentation.
+</p>
+
+<p>
+The distinction also becomes important when Frege discusses sentences,
+thoughts, and contexts in which expressions do not behave according to
+their ordinary reference.
+</p>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+Connections
+</div>
+
+<div class="connections">
+
+<div class="connection">
+
+<h3>Bertrand Russell</h3>
+
+<p>
+Russell's theory of descriptions takes up related problems about
+reference, descriptions, and how language connects with objects.
+</p>
+
+</div>
+
+<div class="connection">
+
+<h3>P. F. Strawson</h3>
+
+<p>
+Strawson later challenges aspects of Russell's account of referring,
+shifting attention toward how expressions are actually used in ordinary
+language.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+Key Terms
+</div>
+
+<div class="definition-grid">
+
+<div class="definition">
+
+<h3>Sense</h3>
+
+<p>
+The mode of presentation associated with an expression.
+</p>
+
+</div>
+
+<div class="definition">
+
+<h3>Reference</h3>
+
+<p>
+The object or entity to which an expression refers.
+</p>
+
+</div>
+
+</div>
+
+</section>
 
 </main>
+
+
+<footer>
+Philosophy Archive · An independent project
+</footer>
 
 </body>
 </html>
