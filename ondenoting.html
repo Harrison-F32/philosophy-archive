@@ -47,97 +47,88 @@ nav a:hover {
 color: white;
 }
 
-nav a:visited {
-color: #ddd;
-}
-
 main {
 max-width: 1000px;
 margin: 70px auto;
 padding: 0 30px;
 }
 
-.back {
-display: inline-block;
-margin-bottom: 35px;
-color: #666;
-text-decoration: none;
-font-family: "Times New Roman", Times, serif;
-font-size: 15px;
+.page-header {
+padding: 90px 0 60px;
+max-width: 1000px;
 }
 
-.back:hover {
-color: #202020;
-}
-
-.title {
-border-bottom: 1px solid #c9c3b8;
-padding-bottom: 35px;
-margin-bottom: 45px;
-}
-
-.title h1 {
-font-size: 48px;
+.page-header h1 {
+font-size: clamp(50px, 8vw, 80px);
 font-weight: normal;
-line-height: 1.1;
-margin: 0 0 10px 0;
+line-height: 1;
+margin-bottom: 25px;
 }
 
 .author {
-font-size: 21px;
-font-style: italic;
+font-size: 19px;
 color: #666;
+font-style: italic;
 }
 
 .section {
-margin-bottom: 50px;
+padding: 20px 0 60px;
+}
+
+.section-title {
+font-size: 15px;
+font-family: Arial, sans-serif;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: #777;
+margin-bottom: 25px;
 }
 
 .section h2 {
-font-size: 30px;
-margin-bottom: 18px;
+font-size: 32px;
+font-weight: normal;
+margin-bottom: 20px;
 }
 
 .section p {
 font-size: 18px;
 line-height: 1.7;
-margin-bottom: 18px;
+max-width: 800px;
+margin-bottom: 20px;
 }
 
-.definition {
-border-left: 3px solid #777;
-padding: 15px 25px;
-margin: 25px 0;
-background: #eee9df;
-}
-
-.definition strong {
-font-size: 19px;
-}
-
-.definition p {
-margin: 8px 0 0 0;
-}
-
-.comparison {
+.definition-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
-margin-top: 25px;
+margin-top: 30px;
 }
 
-.card {
+.definition {
 border: 1px solid #c9c3b8;
-padding: 25px;
+padding: 30px;
+min-height: 180px;
 }
 
-.card h3 {
-margin-top: 0;
-font-size: 22px;
+.definition h3 {
+font-size: 25px;
+font-weight: normal;
+margin-bottom: 15px;
 }
 
-.card p {
+.definition p {
 font-size: 16px;
+margin-bottom: 0;
+}
+
+.example {
+border-left: 3px solid #777;
+padding: 20px 25px;
+margin: 30px 0;
+background: #ebe6db;
+}
+
+.example p {
 margin-bottom: 0;
 }
 
@@ -150,9 +141,34 @@ padding: 20px 30px;
 border-left: 3px solid #777;
 }
 
-.related a {
-color: #444;
-text-decoration: underline;
+.connections {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+.connection {
+border: 1px solid #c9c3b8;
+padding: 25px;
+}
+
+.connection h3 {
+font-size: 22px;
+font-weight: normal;
+margin-bottom: 10px;
+}
+
+.connection p {
+font-size: 16px;
+margin-bottom: 0;
+}
+
+footer {
+padding: 35px 8%;
+font-family: Arial, sans-serif;
+font-size: 13px;
+color: #777;
+border-top: 1px solid #c9c3b8;
 }
 
 @media (max-width: 700px) {
@@ -170,12 +186,13 @@ margin-left: 0;
 margin-right: 18px;
 }
 
-.title h1 {
-font-size: 38px;
+.definition-grid,
+.connections {
+grid-template-columns: 1fr;
 }
 
-.comparison {
-grid-template-columns: 1fr;
+.page-header h1 {
+font-size: 50px;
 }
 
 }
@@ -198,39 +215,45 @@ grid-template-columns: 1fr;
 
 </header>
 
+
 <main>
 
-<a class="back" href="texts.html">← Back to Texts</a>
+<section class="page-header">
 
-<div class="title">
 <h1>On Denoting</h1>
+
 <div class="author">Bertrand Russell</div>
-</div>
+
+</section>
 
 
 <section class="section">
 
-<h2>The Central Problem</h2>
+<div class="section-title">
+The Central Problem
+</div>
+
+<h2>How can we meaningfully talk about things that may not exist?</h2>
 
 <p>
-Russell begins with a problem about expressions that appear to
-refer to things. Phrases such as "the present King of France,"
-"the author of Waverley," and "a man" seem to function as names
-of objects, but Russell argues that their logical structure is
-more complicated.
+Russell begins with a problem about phrases that appear to refer
+to objects. Consider expressions such as “the present King of France,”
+“the author of Waverley,” or “a man.” They seem to stand for things,
+but Russell argues that their logical structure is more complicated
+than ordinary grammar suggests.
 </p>
 
 <p>
-His central question is how language can meaningfully talk about
-something even when there is no corresponding object. How can
-we say something about "the present King of France" when there
-is no present King of France?
+The central problem is what happens when a description appears to
+refer to something that does not exist. If there is no present King
+of France, what are we talking about when we say “the present King
+of France is bald”?
 </p>
 
 <p>
-Russell's solution is his <strong>theory of descriptions</strong>.
-He argues that definite descriptions should not generally be
-treated as names that directly stand for objects.
+Russell's answer is his <strong>theory of descriptions</strong>.
+He argues that descriptions should not generally be treated as
+names that directly refer to objects.
 </p>
 
 </section>
@@ -238,48 +261,55 @@ treated as names that directly stand for objects.
 
 <section class="section">
 
-<h2>Denoting Phrases</h2>
-
-<p>
-Russell distinguishes several kinds of expressions that can be
-used to denote.
-</p>
-
-<div class="comparison">
-
-<div class="card">
-<h3>Indefinite Descriptions</h3>
-
-<p>
-Expressions such as "a man" or "a philosopher." They indicate
-that at least one object satisfies a description, without
-specifying a unique individual.
-</p>
-
+<div class="section-title">
+Key Terms
 </div>
 
-<div class="card">
-<h3>Definite Descriptions</h3>
+<div class="definition-grid">
+
+<div class="definition">
+
+<h3>Denoting Phrase</h3>
 
 <p>
-Expressions such as "the author of Waverley." They appear to
-identify one particular object as uniquely satisfying a
-description.
+An expression that allows us to speak about an object or objects
+through a description rather than simply giving a name.
 </p>
-
-</div>
 
 </div>
 
 <div class="definition">
 
-<strong>Denoting Phrase</strong>
+<h3>Definite Description</h3>
 
 <p>
-An expression that, depending on its form and context, allows
-us to speak about objects through descriptions rather than
-simply naming them.
+A phrase of the form “the so-and-so” that appears to identify
+one particular object.
 </p>
+
+</div>
+
+<div class="definition">
+
+<h3>Logical Form</h3>
+
+<p>
+The underlying logical structure of a proposition, which may differ
+from the grammatical structure of the sentence.
+</p>
+
+</div>
+
+<div class="definition">
+
+<h3>Theory of Descriptions</h3>
+
+<p>
+Russell's account of how definite descriptions can be analyzed
+without treating them as ordinary names.
+</p>
+
+</div>
 
 </div>
 
@@ -288,128 +318,96 @@ simply naming them.
 
 <section class="section">
 
-<h2>The Theory of Descriptions</h2>
+<div class="section-title">
+The Theory of Descriptions
+</div>
+
+<h2>What does “the” actually mean?</h2>
 
 <p>
 Russell's most important claim is that a phrase such as
-"the present King of France" does not function as a simple name.
-Instead, the sentence containing the description has a hidden
-logical structure.
+“the present King of France” does not function like a simple
+proper name. Instead, a sentence containing the description has
+a more complex logical structure.
 </p>
 
 <p>
-Consider the statement:
+When we say “the present King of France is bald,” we are not
+referring to some nonexistent King of France and then saying
+something about him. The sentence can instead be analyzed into
+several separate claims.
 </p>
 
-<div class="quote">
-The present King of France is bald.
-</div>
-
-<p>
-Rather than treating "the present King of France" as the name
-of some mysterious object, Russell analyzes the statement as
-making several claims at once.
-</p>
+<div class="definition-grid">
 
 <div class="definition">
 
-<strong>Russell's Three Conditions</strong>
-
-<p>
-There must be at least one individual satisfying the description,
-there must be at most one such individual, and that individual
-must possess the stated property.
-</p>
-
-</div>
-
-<p>
-In other words, the statement claims that there exists a King
-of France, that there is only one such King, and that this
-individual is bald.
-</p>
-
-</section>
-
-
-<section class="section">
-
-<h2>Existence, Uniqueness, and Predication</h2>
-
-<p>
-Russell's analysis can therefore be understood as separating
-a definite description into three logical components.
-</p>
-
-<div class="comparison">
-
-<div class="card">
 <h3>Existence</h3>
 
 <p>
-There exists at least one object satisfying the description.
+There is at least one individual who satisfies the description.
 </p>
-
-</div>
-
-<div class="card">
-<h3>Uniqueness</h3>
-
-<p>
-There exists no more than one object satisfying the description.
-</p>
-
-</div>
 
 </div>
 
 <div class="definition">
 
-<strong>Predication</strong>
+<h3>Uniqueness</h3>
 
 <p>
-The unique object satisfying the description possesses the
-property asserted of it.
+There is no more than one individual who satisfies the description.
 </p>
 
 </div>
 
+<div class="definition">
+
+<h3>Predication</h3>
+
 <p>
-This allows Russell to explain how a sentence containing a
-description can be meaningful even when the description fails
-to identify any actual object.
+The individual satisfying the description possesses the property
+being asserted.
 </p>
+
+</div>
+
+</div>
 
 </section>
 
 
 <section class="section">
 
-<h2>The Present King of France</h2>
+<div class="section-title">
+The Present King of France
+</div>
+
+<h2>A famous problem in reference</h2>
 
 <p>
-Russell's famous example is the statement "The present King of
-France is bald."
+Russell's most famous example is the sentence:
 </p>
 
+<div class="example">
+
 <p>
-Since there is no present King of France, the description does
-not successfully refer to an existing person. Russell argues,
-however, that we do not need to invent a nonexistent object in
+<strong>“The present King of France is bald.”</strong>
+</p>
+
+</div>
+
+<p>
+There is no present King of France. Nevertheless, the sentence
+appears to be perfectly meaningful. Russell argues that we do
+not need to assume that a nonexistent King of France exists in
 order to understand the sentence.
 </p>
 
 <p>
-Instead, the sentence is false because one of its conditions
-fails: there is no individual who is presently King of France.
-The sentence therefore does not require a nonexistent King of
-France as its subject.
-</p>
-
-<p>
-This is one of the major advantages Russell sees in his theory.
-It allows us to discuss nonexistent or fictional objects without
-assuming that they exist.
+Instead, the sentence contains a claim of existence, a claim of
+uniqueness, and a claim about the resulting individual. Because
+there is no present King of France, the existence condition fails.
+The proposition is therefore false rather than meaningless.
 </p>
 
 </section>
@@ -417,117 +415,230 @@ assuming that they exist.
 
 <section class="section">
 
-<h2>Why Descriptions Are Not Names</h2>
+<div class="section-title">
+Why Descriptions Are Not Names
+</div>
+
+<h2>Grammar can hide logical structure</h2>
 
 <p>
-Russell's theory challenges the idea that every meaningful
-expression must correspond directly to an object.
+Ordinary language makes “the present King of France” look like
+the grammatical subject of the sentence. Russell argues that
+this appearance is misleading.
 </p>
 
 <p>
-A proper name such as "Socrates" appears to function differently
-from a description such as "the teacher of Plato." The latter
-can be analyzed into a more complex proposition rather than
-being treated as a simple label attached to an object.
+A proper name such as “Socrates” and a description such as
+“the teacher of Plato” may appear to perform similar grammatical
+functions, but they do not necessarily have the same logical form.
 </p>
 
 <p>
-For Russell, understanding the logical form beneath ordinary
-language is therefore essential to understanding what a sentence
-actually asserts.
-</p>
-
-</section>
-
-
-<section class="section">
-
-<h2>Definite Descriptions and Knowledge</h2>
-
-<p>
-Russell also connects descriptions with the distinction between
-knowledge by acquaintance and knowledge by description.
-</p>
-
-<p>
-We can know an object directly through acquaintance, but we can
-also think about an object by means of properties that uniquely
-identify it.
-</p>
-
-<p>
-This makes descriptions especially important for our ability to
-think and speak about things that we have never directly
-encountered.
-</p>
-
-</section>
-
-
-<section class="section">
-
-<h2>Russell's Larger Argument</h2>
-
-<p>
-The theory of descriptions is part of Russell's larger attempt
-to uncover the logical structure hidden beneath ordinary
-language.
-</p>
-
-<p>
-Ordinary grammar can make two expressions appear to function
-similarly even when their logical roles are very different.
-Russell therefore argues that philosophical analysis should
-distinguish grammatical appearance from logical form.
+Philosophical analysis must therefore distinguish between the way
+a sentence appears grammatically and what it actually asserts
+logically.
 </p>
 
 <div class="quote">
-The apparent subject of a sentence need not be its logical subject.
+The grammatical form of a sentence does not always reveal its logical form.
 </div>
 
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+Descriptions and Existence
+</div>
+
+<h2>We do not need nonexistent objects</h2>
+
 <p>
-This approach became one of the foundations of twentieth-century
-analytic philosophy and strongly influenced later debates about
-meaning, reference, and ordinary language.
+One of Russell's major motivations is to avoid treating nonexistent
+objects as though they were real entities.
+</p>
+
+<p>
+If every meaningful description had to name an object, then phrases
+such as “the present King of France” would seem to require some
+nonexistent King as their reference. Russell's theory avoids this
+problem by analyzing the description itself.
+</p>
+
+<p>
+The sentence can be meaningful even though no object satisfies
+the description.
 </p>
 
 </section>
 
 
-<section class="section related">
+<section class="section">
 
-<h2>Connections</h2>
+<div class="section-title">
+Russell's Larger Project
+</div>
+
+<h2>Logical analysis and philosophical problems</h2>
 
 <p>
-<strong>Frege</strong> had already distinguished between sense
-and reference and argued that expressions can present the same
-object in different ways.
+Russell's theory of descriptions is part of a larger project:
+using logical analysis to uncover the structure hidden beneath
+ordinary language.
 </p>
 
 <p>
-Russell takes the problem in a different direction. Rather than
-treating every definite description as an expression with a
-reference, he analyzes descriptions into their underlying
-logical structure.
+He believes that many philosophical problems arise because the
+grammar of ordinary language encourages us to assume that words
+and phrases function in ways that they do not actually function
+logically.
 </p>
 
 <p>
-<strong>Strawson</strong> later criticized Russell's account in
-<em>On Referring</em>, arguing that Russell's formal analysis does
-not fully capture how people actually use referring expressions
-in ordinary language.
+By analyzing descriptions, Russell attempts to show how apparently
+mysterious statements can be understood without introducing
+unnecessary objects or entities.
 </p>
 
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+Frege and Russell
+</div>
+
+<div class="connections">
+
+<div class="connection">
+
+<h3>Gottlob Frege</h3>
+
 <p>
-Together, Frege, Russell, and Strawson form an important sequence
-in the development of modern philosophy of language:
-<strong>sense and reference → logical analysis of descriptions →
-ordinary-language reference.</strong>
+Frege's distinction between sense and reference provides an
+important background to Russell's concerns about meaning,
+reference, and identity.
 </p>
+
+</div>
+
+<div class="connection">
+
+<h3>Bertrand Russell</h3>
+
+<p>
+Russell moves the discussion toward logical analysis, arguing
+that definite descriptions can be analyzed rather than treated
+as names directly standing for objects.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+Connections
+</div>
+
+<div class="connections">
+
+<div class="connection">
+
+<h3>On Sense and Reference</h3>
+
+<p>
+Frege's essay examines how expressions can have different senses
+while sharing the same reference. Russell's theory approaches
+related problems about meaning and reference from a different
+logical perspective.
+</p>
+
+</div>
+
+<div class="connection">
+
+<h3>On Referring</h3>
+
+<p>
+Strawson later challenges Russell's account by arguing that
+reference depends heavily on how expressions are actually used
+in particular contexts.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="section-title">
+Key Terms
+</div>
+
+<div class="definition-grid">
+
+<div class="definition">
+
+<h3>Existence</h3>
+
+<p>
+The claim that at least one object satisfies a description.
+</p>
+
+</div>
+
+<div class="definition">
+
+<h3>Uniqueness</h3>
+
+<p>
+The claim that no more than one object satisfies a description.
+</p>
+
+</div>
+
+<div class="definition">
+
+<h3>Predication</h3>
+
+<p>
+The claim that the object satisfying a description has a particular
+property.
+</p>
+
+</div>
+
+<div class="definition">
+
+<h3>Logical Analysis</h3>
+
+<p>
+The examination of the underlying logical structure of a sentence
+rather than relying only on its grammatical appearance.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 </main>
+
+
+<footer>
+Philosophy Archive · An independent project
+</footer>
 
 </body>
 </html>
